@@ -1,4 +1,4 @@
-iOS 13.x debug :{{HIDDEN_APP_ID}}
+iOS 13.x debug :
 ```
 2022-11-12 12:38:59.009105-0800 App[99687:13750481] FBSDKLog: Request <#1182>:
   URL:	https://graph.facebook.com/v14.0/{{HIDDEN_APP_ID}}/activities
