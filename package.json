@@ -8,6 +8,7 @@
     "mobile"
   ],
   "scripts": {
+    "ios13": "npx cap run ios --target=$(npx cap run ios --list|grep \"iPhone 11 Pro\"| awk '{print $NF}')",
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
