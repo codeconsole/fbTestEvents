@@ -76,6 +76,10 @@
 	        <string>n38lu8286q.skadnetwork</string>
 	    </dict>
 	</array>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookAdvertiserIDCollectionEnabled</key>
+	<true/>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Your data will be used to deliver personalized ads to you.</string>
 </dict>
