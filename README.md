@@ -30,3 +30,7 @@ npx cap run ios
 ## Debug Output
 [IOS 13](/debug-output/IOS13.md) 
 [IOS 14](/debug-output/IOS14.md) 
+
+
+### Ticket
+https://github.com/facebook/facebook-ios-sdk/issues/2145
