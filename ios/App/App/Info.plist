@@ -50,20 +50,33 @@
 	  <dict>
 	  <key>CFBundleURLSchemes</key>
 	  <array>
-	    <string>fbAPP-ID</string>
+	    <string>fb{{FB_APP_ID}}/string>
 	  </array>
 	  </dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>APP-ID</string>
+	<string>{{FB_APP_ID}}</string>
 	<key>FacebookClientToken</key>
-	<string>CLIENT-TOKEN</string>
+	<string>{{FB_APP_TOKEN}}</string>
 	<key>FacebookDisplayName</key>
-	<string>APP-NAME</string>
+	<string>{{FB_DISPLAY_NAME}}</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 	  <string>fbapi</string>
 	  <string>fb-messenger-share-api</string>
 	</array>
+	<key>SKAdNetworkItems</key>
+	<array>
+	    <dict>
+	        <key>SKAdNetworkIdentifier</key>
+	        <string>v9wttpbfk9.skadnetwork</string>
+	    </dict>
+	    <dict>
+	        <key>SKAdNetworkIdentifier</key>
+	        <string>n38lu8286q.skadnetwork</string>
+	    </dict>
+	</array>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Your data will be used to deliver personalized ads to you.</string>
 </dict>
 </plist>
