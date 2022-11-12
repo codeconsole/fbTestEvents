@@ -1,0 +1,11 @@
+{
+  "appId": "org.codeconsole.testevents",
+  "appName": "fbTestEvents",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
