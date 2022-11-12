@@ -25,3 +25,8 @@ npx cap run ios
 npx cap run ios
 ```
 8. Log in with FB, then exit app and come back, notice events are **NOT** fired
+
+
+## Debug Output
+[IOS 13](/debug-output/IOS13.md) 
+[IOS 14](/debug-output/IOS14.md) 
