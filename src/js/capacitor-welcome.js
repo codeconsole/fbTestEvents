@@ -1,5 +1,6 @@
 import { SplashScreen } from '@capacitor/splash-screen';
 import { Camera } from '@capacitor/camera';
+import { FacebookLogin } from '@capacitor-community/facebook-login';
 
 window.customElements.define(
   'capacitor-welcome',
@@ -60,27 +61,14 @@ window.customElements.define(
         <h1>Capacitor</h1>
       </capacitor-welcome-titlebar>
       <main>
-        <p>
-          Capacitor makes it easy to build powerful apps for the app stores, mobile web (Progressive Web Apps), and desktop, all
-          with a single code base.
-        </p>
-        <h2>Getting Started</h2>
-        <p>
-          You'll probably need a UI framework to build a full-featured app. Might we recommend
-          <a target="_blank" href="http://ionicframework.com/">Ionic</a>?
-        </p>
-        <p>
-          Visit <a href="https://capacitorjs.com">capacitorjs.com</a> for information
-          on using native features, building plugins, and more.
-        </p>
-        <a href="https://capacitorjs.com" target="_blank" class="button">Read more</a>
         <h2>Tiny Demo</h2>
         <p>
           This demo shows how to call Capacitor plugins. Say cheese!
         </p>
         <p>
-          <button class="button" id="take-photo">Take Photo</button>
+          <button class="button" id="facebook-login">Facebook Login</button>
         </p>
+        <o><pre id="facebook-response"></pre></p>
         <p>
           <img id="image" style="max-width: 100%">
         </p>
@@ -92,21 +80,9 @@ window.customElements.define(
     connectedCallback() {
       const self = this;
 
-      self.shadowRoot.querySelector('#take-photo').addEventListener('click', async function (e) {
-        try {
-          const photo = await Camera.getPhoto({
-            resultType: 'uri',
-          });
-
-          const image = self.shadowRoot.querySelector('#image');
-          if (!image) {
-            return;
-          }
-
-          image.src = photo.webPath;
-        } catch (e) {
-          console.warn('User cancelled', e);
-        }
+      self.shadowRoot.querySelector('#facebook-login').addEventListener('click', async function (e) {
+        var result = await FacebookLogin.login({ permissions: ['email'] })
+        self.shadowRoot.querySelector('#facebook-response').innerHTML = result.accessToken? result.accessToken.token : 'No Token'
       });
     }
   }
